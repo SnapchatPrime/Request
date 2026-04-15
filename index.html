@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>داواکردنی تایبەتمەندی/title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap');
+
+        /* ڕێکخستنی بنەڕەتی */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif; /* بەکارهێنانی فۆنتە نوێیەکە */
+        }
+        
+        body {
+            background-color: #0f0f1a;
+            background-image: radial-gradient(circle at top right, #1a1a2e, #0f0f1a, #05050a);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; 
+            position: relative;
+        }
+        
+        /* شێوە ڕووناکییەکانی پشتەوە */
+        .bg-shape1, .bg-shape2 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 0;
+        }
+        .bg-shape1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 235, 59, 0.12);
+            top: -10%;
+            right: -10%;
+        }
+        .bg-shape2 {
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.04);
+            bottom: -10%;
+            left: -10%;
+        }
+
+        /* بۆکسە شوشەییەکە */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 35px 25px;
+            width: 90%; 
+            max-width: 400px; 
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            z-index: 1; 
+        }
+
+        /* ناونیشان */
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: clamp(22px, 5vw, 26px); 
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+        }
+        h2 span {
+            color: #ffeb3b;
+        }
+
+        /* بەشی داخڵکردنەکان */
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.25);
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            outline: none;
+            resize: none; 
+        }
+
+        input:focus, textarea:focus {
+            border-color: #ffeb3b;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 12px rgba(255, 235, 59, 0.2);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #777;
+            font-weight: 400;
+        }
+
+        /* دوگمەی ناردن */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ffeb3b, #fbc02d);
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 235, 59, 0.2);
+            margin-top: 10px;
+        }
+
+        button:hover {
+            box-shadow: 0 6px 20px rgba(255, 235, 59, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-shape1"></div>
+<div class="bg-shape2"></div>
+
+<div class="glass-container">
+    <h2>Snapchat<span>Prime</span> Requests</h2>
+    <form action="https://formspree.io/f/mreregpp" method="POST">
+        
+        <div class="input-group">
+            <label>ناوی تۆ (ئارەزوومەندانە):</label>
+            <input type="text" name="name" placeholder="دەتوانیت ناوت بنووسیت یان بەتاڵی جێبهێڵیت...">
+        </div>
+        
+        <div class="input-group">
+            <label>تایبەتمەندی داواکراو:</label>
+            <textarea name="request" placeholder="چ تایبەتمەندییەکی نوێ بۆ بەرنامەکە زیاد بکەین؟..." rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">ناردنی داواکاری</button>
+    </form>
+</div>
+
+</body>
+</html>
